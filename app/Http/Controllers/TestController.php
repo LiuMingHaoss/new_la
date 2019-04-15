@@ -36,6 +36,8 @@ class TestController extends Controller
         }else{
             echo '添加用户失败';
         }
+        echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$wx_id.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '欢迎关注 '. $userInfo['nickname'] .']]></Content></xml>';
+
         echo 'SUCCESS';
     }
 

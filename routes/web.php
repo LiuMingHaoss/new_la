@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/test','TestController@valid');
+Route::post('/test','TestController@wxEven');
+
+Route::get('/test/token','TestController@getAccesstoken');
+Route::get('/test/getUserinfo','TestController@getUserinfo');
+Route::get('/test/getMenu','TestController@getMenu');
+Route::get('/test/getAccesstoken','TestController@getAccesstoken');
